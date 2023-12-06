@@ -14,7 +14,7 @@ const App = () => {
       {!showCalculadora && (
         <>
           <header className="header">
-            <h1>Meu Site Elegante</h1>
+            <h1>Home</h1>
             <nav>
               <ul>
                 <li><a href="#sobre">Sobre</a></li>
@@ -43,7 +43,7 @@ const App = () => {
           </main>
 
           <footer className="footer">
-            <p>&copy; 2023 Eric Yuji Ikeda. Todos os direitos reservados.</p>
+            <p>&copy; Eric Yuji Ikeda 2024 | Todos os direitos reservados.</p>
           </footer>
         </>
       )}
