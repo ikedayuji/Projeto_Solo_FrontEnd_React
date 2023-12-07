@@ -1,5 +1,5 @@
 import React, { useEffect, useRef } from 'react';
-import Chart from 'chart.js/auto';
+import Chart from 'chart.js/auto'; // Importa o Chart.js
 
 const Graficos = ({ jsonData }) => {
   const chartContainer = useRef(null);
@@ -27,6 +27,29 @@ const Graficos = ({ jsonData }) => {
         scales: {
           y: {
             beginAtZero: true,
+          },
+        },
+        plugins: {
+          tooltip: {
+            enabled: true,
+            intersect: false,
+            mode: 'index',
+          },
+          zoom: {
+            pan: {
+              enabled: true,
+              mode: 'xy',
+            },
+            zoom: {
+              wheel: {
+                enabled: true,
+              },
+              pinch: {
+                enabled: true,
+              },
+              mode: 'xy',
+              speed: 0.1, 
+            },
           },
         },
       },
