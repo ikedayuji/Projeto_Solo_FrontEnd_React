@@ -27,6 +27,21 @@ const Dashboard = () => {
               Gráficos
             </button>
           </li>
+          <li className="dashboard-right-align">
+            <button onClick={mostrarGraficosClick} className="dashboard-link">
+              Cadastro
+            </button>
+          </li>
+          <li className="dashboard-right-align">
+            <button onClick={mostrarGraficosClick} className="dashboard-link">
+              Login
+            </button>
+          </li>
+          <li className="dashboard-right-align">
+            <button onClick={mostrarGraficosClick} className="dashboard-link">
+              Logout
+            </button>
+          </li>
         </ul>
       </nav>
       {mostrarGraficos ? (

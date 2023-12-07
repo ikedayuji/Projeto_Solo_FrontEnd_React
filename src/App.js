@@ -22,13 +22,13 @@ const App = () => {
       {!showDashboard && !showCalculadora && (
         <>
           <header className="header">
-            <h1>Home</h1>
+            <h1>Página Inicial</h1>
             <nav>
               <ul>
+                <li><a href="#contato"></a>Contato</li>
+                <li><a href="#calculadora" onClick={handleCalculadoraClick}>Calculadora</a></li>
                 <li><a href="#dashbord" onClick={handleDashboardClick}>DashBord</a></li>
                 <li><a href="#servicos">Serviços</a></li>
-                <li><a href="#contato">Contato</a></li>
-                <li><a href="#calculadora" onClick={handleCalculadoraClick}>Calculadora</a></li>
               </ul>
             </nav>
           </header>
