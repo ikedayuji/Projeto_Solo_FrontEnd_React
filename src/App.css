@@ -117,41 +117,44 @@ button:hover {
   margin-left: calc(60% - 50px);
 }
 
-/* Estilos para a barra de navegação superior do Dashboard */
+/* CSS da página do DashBord */
 
 .dashboard {
-  display: flex;
-  flex-direction: column;
-  align-items: center; /* Centraliza os itens horizontalmente */
-  min-height: 100vh;
-  padding: 20px;
+  width: 100%;
+  height: 100vh; /* 100% da altura da viewport */
+  overflow: hidden; /* Para evitar barras de rolagem */
+  position: fixed;
+  top: 0;
+  left: 0;
 }
+
 .dashboard .content {
   flex: 1;
 }
 
 .dashboard .grid-container {
   display: grid;
-  grid-template-columns: repeat(3, 1fr); 
+  grid-template-columns: repeat(3, 1fr);
   gap: 20px;
-  justify-items: center;
-  margin-top: 20px;
+  justify-content: center; /* Centraliza os cartões horizontalmente */
+  margin-top: 10vh; /* Move os cartões 10% para baixo */
 }
 
 .dashboard .card {
-  width: 300px;
-  height: 225px;
+  width: 529px; /* Reduz a largura em cerca de 10% */
+  height: 315px; /* Mantém a altura conforme anteriormente */
   border: 1px solid #cccccc;
   padding: 10px;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
 }
+
 
 .dashboard-footer {
   width: 100%;
   text-align: center;
   padding: 10px 0;
   background-color: gray;
-  color: white;
+  color: white;  
   position: fixed;
   bottom: 0;
 }
@@ -201,7 +204,7 @@ button:hover {
 .dashboard .card {
   width: 300px; 
   height: 225px; 
-  border: 1px solid #ccc; 
+  border: 1px solid gray; 
   padding: 10px; 
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
 }
