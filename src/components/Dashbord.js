@@ -41,7 +41,7 @@ const Dashboard = () => {
         <p>Página Inicial</p>
       )}
       <footer className="dashboard-footer">
-        <p>&copy; Eric Yuji Ikeda 2024 | Todos os direitos reservados.</p>
+        <p>© Eric Yuji Ikeda 2024 | Todos os direitos reservados.</p>
       </footer>
     </div>
   );
