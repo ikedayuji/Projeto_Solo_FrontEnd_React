@@ -32,8 +32,11 @@ const Dashboard = () => {
       {mostrarGraficos ? (
         <div className="grid-container">
           {[...Array(6)].map((_, index) => (
-            <div key={index} className="card">
-              <GraficosApi />
+            <div key={index} className="card increased-height">
+              <h2>Gráfico {index + 1}</h2>
+              <div className="Dashboard-chart">
+                <GraficosApi />
+              </div>
             </div>
           ))}
         </div>
