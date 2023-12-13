@@ -40,6 +40,8 @@ const App = () => {
     speed: 500,
     slidesToShow: 1,
     slidesToScroll: 1,
+    centerMode: true, // Adicionando o centerMode para centralizar as imagens
+    centerPadding: '25%', // Ajustando o espaçamento central das imagens
   };
 
   const images = [
@@ -51,7 +53,7 @@ const App = () => {
     display: 'flex',
     justifyContent: 'center',
     alignItems: 'center',
-    minHeight: '400px', // Definindo a altura mínima da seção de serviços
+    minHeight: '500px', // Definindo a altura mínima da seção de serviços
   };
 
   return (
@@ -79,20 +81,19 @@ const App = () => {
 
             <section id="servicos" className="section">
               <div style={centerSliderStyle}>
-                <div style={{ width: '70%' }}>
+                <div style={{ width: '90%' }}> {/* Reduzindo a largura para diminuir a área do carrossel */}
                   <h2></h2>
                   <Slider {...settings}>
                     {images.map((image, index) => (
-                      <div key={index} style={{ display: 'flex', justifyContent: 'center' }}>
+                      <div key={index}>
                         <img
                           src={image}
                           alt={`Imagem ${index}`}
-                          style={{ width: '900px', height: '500px', objectFit: 'contain' }}
+                          style={{ width: '90%', height: 'auto', objectFit: 'contain' }} // Ajustando o estilo das imagens
                         />
                       </div>
                     ))}
                   </Slider>
-
                 </div>
               </div>
             </section>
