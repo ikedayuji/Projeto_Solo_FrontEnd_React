@@ -1,16 +1,19 @@
 import React, { useState } from 'react';
 import GraficosApi from './GraficosApi';
-import '../App.css'; 
+import '../App.css';
 
 const Dashboard = () => {
   const [mostrarGraficos, setMostrarGraficos] = useState(false);
+  const [paginaAtual, setPaginaAtual] = useState('inicio');
 
   const mostrarGraficosClick = () => {
     setMostrarGraficos(true);
+    setPaginaAtual('graficos');
   };
 
   const inicioClick = () => {
     setMostrarGraficos(false);
+    setPaginaAtual('inicio');
   };
 
   return (
@@ -18,12 +21,12 @@ const Dashboard = () => {
       <nav className="dashboard-nav">
         <ul className="dashboard-menu">
           <li>
-            <button onClick={inicioClick} className="dashboard-link">
+            <button onClick={inicioClick} className={paginaAtual === 'inicio' ? 'dashboard-link active' : 'dashboard-link'}>
               Início
             </button>
           </li>
           <li className="dashboard-right-align">
-            <button onClick={mostrarGraficosClick} className="dashboard-link">
+            <button onClick={mostrarGraficosClick} className={paginaAtual === 'graficos' ? 'dashboard-link active' : 'dashboard-link'}>
               Gráficos
             </button>
           </li>

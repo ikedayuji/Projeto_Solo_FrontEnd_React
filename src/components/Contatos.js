@@ -1,33 +1,25 @@
-import React, { useState } from 'react';
+import React from 'react';
+import '../App.css';
 
 const Contatos = () => {
-  const [contacts, setContacts] = useState([]);
-
-  const handleAddContact = (e) => {
-    e.preventDefault();
-    const name = e.target.name.value;
-    const email = e.target.email.value;
-    setContacts([...contacts, { name, email }]);
-    e.target.reset();
-  };
+  const meusContatos = [
+    { name: 'Seu Nome', email: 'seuemail@example.com' },
+    { name: 'Outro Contato', email: 'outroemail@example.com' },
+  ];
 
   return (
-    <div>
+    <div className="contatos-container">
       <h2>Lista de Contatos</h2>
-      <ul>
-        {contacts.map((contact, index) => (
-          <li key={index}>
-            {contact.name} - {contact.email}
+      <ul className="contatos-list">
+        {meusContatos.map((contact, index) => (
+          <li key={index} className="contato-item">
+            <div className="contato-info">
+              <p className="contato-name">{contact.name}</p>
+              <p className="contato-email">{contact.email}</p>
+            </div>
           </li>
         ))}
       </ul>
-
-      <h3>Adicionar Novo Contato</h3>
-      <form onSubmit={handleAddContact}>
-        <input type="text" name="name" placeholder="Nome" />
-        <input type="email" name="email" placeholder="Email" />
-        <button type="submit">Adicionar</button>
-      </form>
     </div>
   );
 };

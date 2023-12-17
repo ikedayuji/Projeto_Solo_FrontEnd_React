@@ -16,28 +16,28 @@ const App = () => {
   const [pageTitle, setPageTitle] = useState('Página Inicial'); // Controle do título
 
   const handleDashboardClick = () => {
-    setPageTitle('Dashboard'); // Altera o título para Dashboard
+    setPageTitle('Dashboard'); 
     setShowDashboard(true);
     setShowCalculadora(false);
     setShowContatos(false);
   };
 
   const handleCalculadoraClick = () => {
-    setPageTitle('Calculadora'); // Altera o título para Calculadora
+    setPageTitle('Calculadora');
     setShowDashboard(false);
     setShowCalculadora(true);
     setShowContatos(false);
   };
 
   const handleContatosClick = () => {
-    setPageTitle('Contatos'); // Altera o título para Contatos
+    setPageTitle('Contatos'); 
     setShowDashboard(false);
     setShowCalculadora(false);
     setShowContatos(true);
   };
 
   const handleServicosClick = () => {
-    setPageTitle('Serviços'); // Altera o título para Serviços
+    setPageTitle('Serviços');
     setShowDashboard(false);
     setShowCalculadora(false);
     setShowContatos(false);
@@ -114,6 +114,12 @@ const App = () => {
 
         {showDashboard && <Dashbord />}
         {showCalculadora && <Calculadora />}
+      </main>
+
+      <main className="main-content">
+        <section id="contato" className="section">
+          {showContatos && <Contatos />}
+        </section>
       </main>
 
       <footer className="footer">
