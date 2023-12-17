@@ -5,7 +5,7 @@ const Calc = () => {
   const [display, setDisplay] = useState('');
 
   const handleButtonClick = (value) => {
-    setDisplay((prevDisplay) => prevDisplay + value);
+    setDisplay((prevDisplay) => prevDisplay + value); 
   };
 
   const handleClear = () => {

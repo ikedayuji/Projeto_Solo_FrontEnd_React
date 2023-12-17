@@ -13,23 +13,34 @@ const App = () => {
   const [showDashboard, setShowDashboard] = useState(false);
   const [showCalculadora, setShowCalculadora] = useState(false);
   const [showContatos, setShowContatos] = useState(false);
+  const [pageTitle, setPageTitle] = useState('Página Inicial'); // Controle do título
 
   const handleDashboardClick = () => {
+    setPageTitle('Dashboard'); // Altera o título para Dashboard
     setShowDashboard(true);
     setShowCalculadora(false);
     setShowContatos(false);
   };
 
   const handleCalculadoraClick = () => {
+    setPageTitle('Calculadora'); // Altera o título para Calculadora
     setShowDashboard(false);
     setShowCalculadora(true);
     setShowContatos(false);
   };
 
   const handleContatosClick = () => {
+    setPageTitle('Contatos'); // Altera o título para Contatos
     setShowDashboard(false);
     setShowCalculadora(false);
     setShowContatos(true);
+  };
+
+  const handleServicosClick = () => {
+    setPageTitle('Serviços'); // Altera o título para Serviços
+    setShowDashboard(false);
+    setShowCalculadora(false);
+    setShowContatos(false);
   };
 
   const settings = {
@@ -38,8 +49,8 @@ const App = () => {
     speed: 500,
     slidesToShow: 1,
     slidesToScroll: 1,
-    centerMode: true, // Adicionando o centerMode para centralizar as imagens
-    centerPadding: '25%', // Ajustando o espaçamento central das imagens
+    centerMode: true,
+    centerPadding: '25%',
   };
 
   const images = [
@@ -51,19 +62,19 @@ const App = () => {
     display: 'flex',
     justifyContent: 'center',
     alignItems: 'center',
-    minHeight: '500px', // Definindo a altura mínima da seção de serviços
+    minHeight: '500px',
   };
 
   return (
     <div className="app">
       <header className="header">
-        <h1>Página Inicial</h1>
+        <h1>{pageTitle}</h1>
         <nav>
           <ul>
             <li><a href="#contato" onClick={handleContatosClick}>Contato</a></li>
             <li><a href="#calculadora" onClick={handleCalculadoraClick}>Calculadora</a></li>
             <li><a href="#dashbord" onClick={handleDashboardClick}>DashBord</a></li>
-            <li><a href="#servicos">Serviços</a></li>
+            <li><a href="#servicos" onClick={handleServicosClick}>Serviços</a></li>
           </ul>
         </nav>
       </header>
@@ -79,14 +90,14 @@ const App = () => {
 
             <section id="servicos" className="section">
               <div style={centerSliderStyle}>
-                <div style={{ width: '90%' }}> {/* Reduzindo a largura para diminuir a área do carrossel */}
+                <div style={{ width: '90%' }}>
                   <Slider {...settings}>
                     {images.map((image, index) => (
                       <div key={index}>
                         <img
                           src={image}
                           alt={`Imagem ${index}`}
-                          style={{ width: '90%', height: 'auto', objectFit: 'contain' }} // Ajustando o estilo das imagens
+                          style={{ width: '90%', height: 'auto', objectFit: 'contain' }}
                         />
                       </div>
                     ))}

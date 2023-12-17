@@ -1,5 +1,5 @@
 import React, { useEffect, useRef } from 'react';
-import Chart from 'chart.js/auto'; // Importa o Chart.js
+import Chart from 'chart.js/auto'; 
 
 const Graficos = ({ jsonData }) => {
   const chartContainer = useRef(null);
