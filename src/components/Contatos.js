@@ -3,8 +3,8 @@ import '../App.css';
 
 const Contatos = () => {
   const meusContatos = [
-    { name: 'Seu Nome', email: 'seuemail@example.com' },
-    { name: 'Outro Contato', email: 'outroemail@example.com' },
+    { name: 'Nome', email: '' },
+    { name: 'Email', email: '' },
   ];
 
   return (

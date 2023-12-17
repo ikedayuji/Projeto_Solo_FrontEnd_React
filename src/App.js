@@ -8,6 +8,7 @@ import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
 import Graficos from './Images/Graficos.png';
 import ImagemCalculadora from './Images/ImagemCalculadora.png';
+import ImagemContatos from './Images/ImagemContatos.png';
 
 const App = () => {
   const [showDashboard, setShowDashboard] = useState(false);
@@ -53,9 +54,10 @@ const App = () => {
     centerPadding: '25%',
   };
 
-  const images = [
+  const images = [ //Nome das Imagens para Lincar no carrossel
     Graficos,
     ImagemCalculadora,
+    ImagemContatos,
   ];
 
   const centerSliderStyle = {
