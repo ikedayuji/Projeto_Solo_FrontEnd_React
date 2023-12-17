@@ -6,8 +6,6 @@ import Contatos from './components/Contatos';
 import Slider from 'react-slick';
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
-
-// Importação das imagens
 import Graficos from './Images/Graficos.png';
 import ImagemCalculadora from './Images/ImagemCalculadora.png';
 
@@ -82,7 +80,6 @@ const App = () => {
             <section id="servicos" className="section">
               <div style={centerSliderStyle}>
                 <div style={{ width: '90%' }}> {/* Reduzindo a largura para diminuir a área do carrossel */}
-                  <h2></h2>
                   <Slider {...settings}>
                     {images.map((image, index) => (
                       <div key={index}>
