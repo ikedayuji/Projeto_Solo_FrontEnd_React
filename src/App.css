@@ -12,11 +12,25 @@ body {
 
 /* Estilos para o cabeçalho */
 .header {
+  height: 60px;
   background-color: #333;
   color: white;
   padding: 20px;
   text-align: center;
 }
+
+.main-content {
+  padding-top: 60px; /* Altura da barra de navegação */
+  padding-bottom: 40px; /* Altura do footer */
+  overflow-y: auto; /* Adiciona barra de rolagem quando necessário */
+  position: relative; /* Importante para garantir o posicionamento correto dos elementos internos */
+}
+
+.section {
+  width: 100%;
+  /* Outros estilos */
+}
+
 
 .header h1 {
   margin: 0;
@@ -53,6 +67,11 @@ body {
   color: white;
   text-align: center;
   padding: 10px 0;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 40px; /* Altura do footer */
 }
 
 /* Página da Calculadora */
@@ -153,7 +172,6 @@ button:hover {
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
 }
 
-
 .dashboard-footer {
   width: 100%;
   text-align: center;
@@ -163,6 +181,11 @@ button:hover {
   position: fixed;
   bottom: 0;
 }
+
+.dashboard .app .app-footer {
+  display: none !important;
+}
+
 .dashboard-header {
   background-color: #333;
   color: white;
